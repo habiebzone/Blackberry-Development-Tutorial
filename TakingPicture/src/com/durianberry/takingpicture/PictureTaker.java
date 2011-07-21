@@ -15,6 +15,7 @@ import net.rim.device.api.system.EncodedImage;
 import net.rim.device.api.system.EventInjector;
 import net.rim.device.api.ui.Touchscreen;
 import net.rim.device.api.ui.UiApplication;
+import net.rim.device.api.ui.component.Dialog;
 
 public class PictureTaker implements FileSystemJournalListener {
 	private static PictureTaker taker;
@@ -74,6 +75,7 @@ public class PictureTaker implements FileSystemJournalListener {
 								String orientation = "";
 								try {
 									orientation = m.getKeyValue("orientation");
+									Dialog.alert("Orientation: "+orientation);
 								} catch (Exception e) {
 								}
 							}
